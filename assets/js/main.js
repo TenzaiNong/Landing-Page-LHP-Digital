@@ -5,79 +5,76 @@
 
 // =============================================
 // DATA ENTITAS
-// Ganti nilai `img` dengan path lokal setelah
-// gambar asli tersedia di assets/img/
-// Contoh: img: 'assets/img/badung.webp'
 // =============================================
 const entitasList = [
   {
     id: 1,
     name: 'Pemerintah Provinsi Bali',
     type: 'Pemerintah Provinsi',
-    img: null, // ganti: 'assets/img/pemprov-bali.webp'
+    img: 'assets/img/bali.webp',
     icon: 'fa-solid fa-building-columns',
   },
   {
     id: 2,
     name: 'Pemerintah Kota Denpasar',
     type: 'Pemerintah Kota',
-    img: null,
+    img: 'assets/img/denpasar.webp',
     icon: 'fa-solid fa-city',
   },
   {
     id: 3,
     name: 'Pemerintah Kabupaten Badung',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/badung.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 4,
     name: 'Pemerintah Kabupaten Gianyar',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/gianyar.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 5,
     name: 'Pemerintah Kabupaten Buleleng',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/buleleng.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 6,
     name: 'Pemerintah Kabupaten Tabanan',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/tabanan.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 7,
     name: 'Pemerintah Kabupaten Jembrana',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/jembrana.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 8,
     name: 'Pemerintah Kabupaten Klungkung',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/klungkung.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 9,
     name: 'Pemerintah Kabupaten Bangli',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/bangli.webp',
     icon: 'fa-solid fa-building',
   },
   {
     id: 10,
     name: 'Pemerintah Kabupaten Karangasem',
     type: 'Pemerintah Kabupaten',
-    img: null,
+    img: 'assets/img/karangasem.webp',
     icon: 'fa-solid fa-building',
   },
 ];

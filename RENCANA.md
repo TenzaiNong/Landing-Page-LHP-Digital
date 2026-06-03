@@ -8,7 +8,7 @@
 
 | Tahap | Nama | Status |
 |-------|------|--------|
-| 1 | Persiapan Lingkungan Lokal | ⬜ Belum Dimulai |
+| 1 | Persiapan Lingkungan Lokal | ✅ Selesai |
 | 2 | Penyempurnaan Aset & Konten | ⬜ Belum Dimulai |
 | 3 | Optimasi Mobile-First & UI/UX | ⬜ Belum Dimulai |
 | 4 | Interaktivitas Lanjutan & Aksesibilitas | ⬜ Belum Dimulai |
@@ -23,9 +23,9 @@
 > **Fokus:** Memindahkan proyek ke lingkungan lokal dan mengatur struktur folder yang baik.
 
 ### 1.1 Inisialisasi Proyek
-- [ ] Buat folder proyek baru di lokal (misal: `lhp-lkpd-2025`)
-- [ ] Buka folder tersebut di VS Code
-- [ ] *(Opsional, disarankan)* Inisialisasi Git: `git init`
+- [x] Buat folder proyek baru di lokal (`e:\Landing Page LHP Digital`)
+- [x] Buka folder tersebut di VS Code
+- [x] Inisialisasi Git: `git init`
 
 ### 1.2 Struktur Folder Standar
 
@@ -43,14 +43,14 @@ lhp-lkpd-2025/
 └── README.md
 ```
 
-- [ ] Buat semua folder di atas
+- [x] Buat semua folder di atas
 
 ### 1.3 Refactoring `index.html`
-- [ ] Pindahkan CSS kustom dari `<style>` ke `assets/css/style.css`
+- [x] Pindahkan CSS kustom dari `<style>` ke `assets/css/style.css`
   ```html
   <link rel="stylesheet" href="assets/css/style.css">
   ```
-- [ ] Pindahkan JavaScript (`entitasList`, inisialisasi Swiper, smooth scroll) ke `assets/js/main.js`
+- [x] Pindahkan JavaScript (`entitasList`, inisialisasi Swiper, smooth scroll) ke `assets/js/main.js`
   ```html
   <script src="assets/js/main.js"></script>
   ```
@@ -59,17 +59,17 @@ lhp-lkpd-2025/
 
 > **Mengapa?** CDN tidak disarankan untuk produksi. Tailwind via npm mengaktifkan *purging* CSS yang tidak terpakai → file lebih kecil, load lebih cepat.
 
-- [ ] Install Tailwind: `npm install -D tailwindcss`
-- [ ] Inisialisasi config: `npx tailwindcss init`
-- [ ] Pindahkan konfigurasi tema *spring green* dari `<script>` ke `tailwind.config.js`
-- [ ] Buat `src/input.css` dan tambahkan direktif:
+- [x] Install Tailwind: `npm install -D tailwindcss@3`
+- [x] Inisialisasi config: `tailwind.config.js` dibuat manual
+- [x] Konfigurasi tema *spring green* ada di `tailwind.config.js`
+- [x] Buat `src/input.css` dan tambahkan direktif:
   ```css
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
   ```
-- [ ] Jalankan watcher: `npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch`
-- [ ] Ganti CDN script dengan link lokal di `index.html`:
+- [x] Watcher: `npm run dev` (`npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch`)
+- [x] Ganti CDN script dengan link lokal di `index.html`:
   ```html
   <link rel="stylesheet" href="assets/css/tailwind.css">
   ```
