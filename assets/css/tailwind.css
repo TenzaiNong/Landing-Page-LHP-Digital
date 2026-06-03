@@ -623,10 +623,6 @@ video {
   display: none;
 }
 
-.h-10 {
-  height: 2.5rem;
-}
-
 .h-11 {
   height: 2.75rem;
 }
@@ -643,8 +639,8 @@ video {
   height: 2.25rem;
 }
 
-.w-10 {
-  width: 2.5rem;
+.min-h-\[44px\] {
+  min-height: 44px;
 }
 
 .w-11 {

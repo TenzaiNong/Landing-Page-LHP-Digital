@@ -9,7 +9,7 @@
 | Tahap | Nama | Status |
 |-------|------|--------|
 | 1 | Persiapan Lingkungan Lokal | ✅ Selesai |
-| 2 | Penyempurnaan Aset & Konten | ⬜ Belum Dimulai |
+| 2 | Penyempurnaan Aset & Konten | ✅ Selesai |
 | 3 | Optimasi Mobile-First & UI/UX | ⬜ Belum Dimulai |
 | 4 | Interaktivitas Lanjutan & Aksesibilitas | ⬜ Belum Dimulai |
 | 5 | Persiapan Deployment | ⬜ Belum Dimulai |
@@ -81,21 +81,20 @@ lhp-lkpd-2025/
 > **Fokus:** Mengganti placeholder dengan aset nyata dan memastikan kualitas visual.
 
 ### 2.1 Pengumpulan & Optimasi Gambar
-- [ ] Kumpulkan foto asli/resmi gedung/kantor untuk ke-10 entitas:
+- [x] Kumpulkan foto asli/resmi gedung/kantor untuk ke-10 entitas:
   - Pemprov Bali, Kota Denpasar, dan 8 Kabupaten
-- [ ] Kompres gambar ke format `.webp` (performa terbaik di web mobile)
-- [ ] Pastikan dimensi seragam atau rasio aspek sama (misal: `16:9` atau `4:3`)
-- [ ] Simpan semua gambar di `assets/img/`
+- [x] Kompres gambar ke format `.webp` (performa terbaik di web mobile)
+- [x] Simpan semua gambar di `assets/img/` (10 file: bali, denpasar, badung, gianyar, buleleng, tabanan, jembrana, klungkung, bangli, karangasem)
 
 ### 2.2 Pembaruan Data Entitas (`main.js`)
-- [ ] Perbarui array `entitasList` — ganti URL Unsplash dengan path lokal:
+- [x] Perbarui array `entitasList` — semua path gambar lokal sudah terhubung:
   ```js
   img: 'assets/img/badung.webp'
   ```
 
 ### 2.3 Tinjau Ulang Tipografi & Ikon
-- [ ] Pastikan font `Inter` dimuat dengan benar, periksa *fallback font*
-- [ ] Pastikan versi CDN Font Awesome mutakhir, atau unduh secara lokal jika perlu akses offline
+- [x] Font `Inter` dimuat via Google Fonts dengan `preconnect` + fallback `system-ui`
+- [x] Font Awesome 6.5.2 terpasang via CDN dengan SRI integrity hash
 
 ---
 
