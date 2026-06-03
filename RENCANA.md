@@ -11,7 +11,7 @@
 | 1 | Persiapan Lingkungan Lokal | ✅ Selesai |
 | 2 | Penyempurnaan Aset & Konten | ✅ Selesai |
 | 3 | Optimasi Mobile-First & UI/UX | ✅ Selesai |
-| 4 | Interaktivitas Lanjutan & Aksesibilitas | ⬜ Belum Dimulai |
+| 4 | Interaktivitas Lanjutan & Aksesibilitas | ✅ Selesai |
 | 5 | Persiapan Deployment | ⬜ Belum Dimulai |
 
 > Legend: ⬜ Belum Dimulai · 🔄 Sedang Dikerjakan · ✅ Selesai
@@ -128,21 +128,25 @@ lhp-lkpd-2025/
 
 > **Fokus:** Membuat halaman lebih dinamis dan dapat diakses oleh semua pengguna.
 
-### 4.1 Animasi Scroll *(Opsional)*
-- [ ] Pertimbangkan library ringan **AOS (Animate On Scroll)** untuk efek fade-in/slide-up pada elemen utama (kotak alert PPID, header)
+### 4.1 Animasi Scroll
+- [x] AOS (Animate On Scroll) v2.3.4 dipasang via CDN
+- [x] Elemen yang dianimasikan: Hero section (`fade-in`), Info Alert (`fade-up`), heading Daftar Entitas (`fade-up`)
+- [x] `AOS.init()` dipanggil di `DOMContentLoaded` dengan `once: true` agar animasi tidak berulang
 
 ### 4.2 Peningkatan SEO
-- [ ] Perbarui meta tag di `<head>`:
-  - Deskripsi akurat
-  - Keywords
-  
-- [ ] Pastikan semua gambar memiliki atribut `alt` yang deskriptif
-  - Contoh: `alt="Foto Gedung Kantor Bupati Badung"`
-- [ ] Pastikan struktur heading (`H1` → `H2` → `H3`) semantis dan teratur
+- [x] Meta tag `<head>` lengkap:
+  - `og:site_name`, `og:locale` ditambahkan
+  - Meta Twitter Card (`twitter:card`, `twitter:title`, `twitter:description`) ditambahkan
+- [x] Semua gambar entitas memiliki `alt="Foto [Nama Entitas]"` (dirender oleh `main.js`)
+- [x] Struktur heading semantis: `H1` (judul halaman) → `H2` (Daftar Entitas Pemeriksa)
 
 ### 4.3 Audit Aksesibilitas (a11y)
-- [ ] Periksa kontras warna teks vs latar belakang (khususnya *spring green* di latar terang)
-- [ ] Pastikan navigasi keyboard berfungsi — elemen carousel dan tombol CTA dapat dijangkau dengan `Tab`
+- [x] Kontras warna: teks pada latar spring-green menggunakan `text-spring-green-800` / `text-spring-green-700` (rasio kontras memadai)
+- [x] `aria-hidden="true"` ditambahkan pada semua ikon Font Awesome dekoratif di kartu entitas
+- [x] `aria-label` deskriptif pada link kartu: `"Akses laporan [nama entitas] di PPID BPK"`
+- [x] `tabindex="0"` pada tombol navigasi Swiper (prev/next)
+- [x] `aria-expanded` pada hamburger button sudah diupdate saat buka/tutup
+- [x] `:focus-visible` outline di `style.css` untuk navigasi keyboard
 
 ---
 
