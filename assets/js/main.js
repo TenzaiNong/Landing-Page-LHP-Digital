@@ -144,47 +144,11 @@ function initSwiper() {
 }
 
 // =============================================
-// MOBILE HAMBURGER MENU
-// =============================================
-function initMobileMenu() {
-  const btn = document.getElementById('hamburger-btn');
-  const menu = document.getElementById('mobile-menu');
-  const icon = document.getElementById('hamburger-icon');
-  const menuEntitasLink = document.getElementById('mobile-menu-entitas');
-
-  if (!btn || !menu) return;
-
-  btn.addEventListener('click', () => {
-    const isOpen = !menu.classList.contains('hidden');
-
-    if (isOpen) {
-      menu.classList.add('hidden');
-      icon.className = 'fa-solid fa-bars text-lg';
-      btn.setAttribute('aria-expanded', 'false');
-    } else {
-      menu.classList.remove('hidden');
-      icon.className = 'fa-solid fa-xmark text-lg';
-      btn.setAttribute('aria-expanded', 'true');
-    }
-  });
-
-  // Tutup menu saat link di mobile diklik
-  if (menuEntitasLink) {
-    menuEntitasLink.addEventListener('click', () => {
-      menu.classList.add('hidden');
-      icon.className = 'fa-solid fa-bars text-lg';
-      btn.setAttribute('aria-expanded', 'false');
-    });
-  }
-}
-
-// =============================================
 // INIT SEMUA
 // =============================================
 document.addEventListener('DOMContentLoaded', () => {
   renderEntityCards();
   initSwiper();
-  initMobileMenu();
 
   // AOS — Animate On Scroll
   if (typeof AOS !== 'undefined') {
