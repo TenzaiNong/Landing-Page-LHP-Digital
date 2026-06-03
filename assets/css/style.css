@@ -8,6 +8,75 @@ body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+/* ===== HERO SECTION WITH BACKGROUND IMAGE & OVERLAY ===== */
+.hero-section {
+  position: relative;
+  background-color: #16a34a; /* spring-green-600 fallback */
+}
+
+.hero-bg-image {
+  background-image: url('/assets/img/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: 1;
+}
+
+.hero-overlay {
+  opacity: 1; /* default full opaque */
+  will-change: opacity;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none; /* allow clicks to pass through */
+}
+
+/* Content wrapper - ensure it's above overlay */
+.hero-section > div:last-child {
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* Add text shadow for better readability */
+.hero-section h1,
+.hero-section p,
+.hero-section span,
+.hero-section a {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile responsiveness - background attachment */
+@media (max-width: 768px) {
+  .hero-bg-image {
+    background-attachment: scroll; /* mobile browsers lebih support scroll */
+  }
+}
+
+/* Preset opacity classes untuk mudah digunakan */
+.hero-section[data-opacity="10"] .hero-overlay { opacity: 0.1 !important; }
+.hero-section[data-opacity="20"] .hero-overlay { opacity: 0.2 !important; }
+.hero-section[data-opacity="30"] .hero-overlay { opacity: 0.3 !important; }
+.hero-section[data-opacity="40"] .hero-overlay { opacity: 0.4 !important; }
+.hero-section[data-opacity="50"] .hero-overlay { opacity: 0.5 !important; }
+.hero-section[data-opacity="60"] .hero-overlay { opacity: 0.6 !important; }
+.hero-section[data-opacity="70"] .hero-overlay { opacity: 0.7 !important; }
+.hero-section[data-opacity="80"] .hero-overlay { opacity: 0.8 !important; }
+.hero-section[data-opacity="90"] .hero-overlay { opacity: 0.9 !important; }
+.hero-section[data-opacity="100"] .hero-overlay { opacity: 1 !important; }
+
 /* ===== SWIPER CUSTOM ===== */
 .entitas-swiper {
   padding-bottom: 2.5rem !important;
@@ -155,4 +224,17 @@ body, html {
    tidak memicu horizontal scroll di luar container */
 #entitas {
   overflow-x: clip;
+}
+
+/* ===== SWIPER NAVIGATION BUTTONS ===== */
+.swiper-btn-prev,
+.swiper-btn-next {
+  color: #1f2937 !important; /* text-gray-800 - lebih gelap dan terlihat */
+  font-size: 1.25rem !important;
+}
+
+.swiper-btn-prev:hover,
+.swiper-btn-next:hover {
+  color: #ffffff !important;
+  background-color: #16a34a !important;
 }

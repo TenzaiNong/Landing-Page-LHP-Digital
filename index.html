@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -42,9 +42,7 @@
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <!-- Logo / Brand -->
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 bg-spring-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-          <i class="fa-solid fa-landmark text-white text-sm"></i>
-        </div>
+        <img src="assets/img/Logo_BPK.png" alt="Logo BPK" class="h-9 w-9 object-contain">
         <div class="leading-tight">
           <p class="text-xs text-gray-500 font-medium">BPK Perwakilan</p>
           <p class="text-sm font-bold text-gray-800">Provinsi Bali</p>
@@ -83,8 +81,15 @@
   </header>
 
   <!-- ===== HERO SECTION ===== -->
-  <section class="bg-gradient-to-br from-spring-green-700 via-spring-green-600 to-emerald-700 text-white py-16 md:py-24" data-aos="fade-in" data-aos-duration="800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <section class="hero-section relative text-white py-16 md:py-24 overflow-hidden" data-opacity="40" data-aos="fade-in" data-aos-duration="800">
+    <!-- Background Image -->
+    <div class="hero-bg-image absolute inset-0 bg-cover bg-center bg-no-repeat"></div>
+    
+    <!-- Color Overlay with Gradient -->
+    <div class="hero-overlay absolute inset-0 bg-gradient-to-br from-spring-green-700 via-spring-green-600 to-emerald-700"></div>
+    
+    <!-- Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
       <span class="inline-block bg-white/20 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 tracking-wide uppercase">
         BPK Perwakilan Provinsi Bali
       </span>
@@ -109,12 +114,13 @@
       <i class="fa-solid fa-circle-info text-spring-green-600 text-lg mt-0.5 flex-shrink-0"></i>
       <div>
         <p class="text-sm font-semibold text-spring-green-800">Cara Mengakses Laporan</p>
-        <p class="text-sm text-spring-green-700 mt-0.5">
-          Laporan dapat diunduh secara resmi melalui portal
-          <a href="https://bali-ppid.bpk.go.id/" target="_blank" rel="noopener noreferrer"
-             class="font-semibold underline hover:no-underline">bali-ppid.bpk.go.id</a>.
-          Pilih entitas yang diinginkan, lalu temukan dokumen LHP LKPD TA 2025.
-        </p>
+        <ol class="text-sm text-spring-green-700 mt-2 space-y-1.5 list-decimal list-outside pl-5">
+          <li>Masuk ke portal <a href="https://bali-ppid.bpk.go.id/" target="_blank" rel="noopener noreferrer" class="font-semibold underline hover:no-underline">bali-ppid.bpk.go.id</a> dengan akun Anda (atau <strong>buat akun baru</strong> jika belum memiliki)</li>
+          <li>Klik menu <strong>"Permintaan Informasi"</strong> di navigasi utama</li>
+          <li>Cari atau buat permintaan baru untuk dokumen <strong>LHP LKPD TA 2025</strong> sesuai entitas (Pemerintah Daerah) yang diinginkan</li>
+          <li>Tunggu persetujuan dan notifikasi dari pengelola PPID</li>
+          <li>Unduh dokumen melalui halaman permintaan Anda atau link yang dikirim via notifikasi</li>
+        </ol>
       </div>
     </div>
   </div>
@@ -150,9 +156,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <div class="w-8 h-8 bg-spring-green-600 rounded-lg flex items-center justify-center">
-            <i class="fa-solid fa-landmark text-white text-xs"></i>
-          </div>
+          <img src="assets/img/Logo_BPK.png" alt="Logo BPK" class="h-8 w-8 object-contain"> 
           <div>
             <p class="text-white text-sm font-semibold">BPK Perwakilan Provinsi Bali</p>
             <p class="text-xs">Badan Pemeriksa Keuangan RI</p>
