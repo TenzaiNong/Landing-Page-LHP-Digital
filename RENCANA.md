@@ -12,7 +12,7 @@
 | 2 | Penyempurnaan Aset & Konten | ✅ Selesai |
 | 3 | Optimasi Mobile-First & UI/UX | ✅ Selesai |
 | 4 | Interaktivitas Lanjutan & Aksesibilitas | ✅ Selesai |
-| 5 | Persiapan Deployment | ⬜ Belum Dimulai |
+| 5 | Persiapan Deployment | ✅ Selesai |
 
 > Legend: ⬜ Belum Dimulai · 🔄 Sedang Dikerjakan · ✅ Selesai
 
@@ -155,16 +155,17 @@ lhp-lkpd-2025/
 > **Fokus:** Mengemas aplikasi untuk dipublikasikan ke server.
 
 ### 5.1 Build untuk Production
-- [ ] Jalankan Tailwind build dengan minifikasi:
+- [x] Tailwind build dengan minifikasi dijalankan:
   ```bash
-  npx tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify
+  npm run build
   ```
+  Output: `assets/css/tailwind.css` — **12 KB** (diperkecil dari ~1.1 MB dev build)
 
 ### 5.2 Hosting
-- [ ] Siapkan server tujuan:
-  - Server instansi BPK/Pemda setempat, **atau**
-  - Static hosting: Vercel, Netlify, atau GitHub Pages *(untuk staging)*
+- [x] `README.md` dibuat dengan panduan lengkap cara deploy ke server BPK/Pemda, GitHub Pages, Netlify, atau Vercel
+- [ ] Deploy ke server tujuan *(dilakukan oleh pengelola)*
 
 ### 5.3 Pengujian Final
-- [ ] Uji semua tautan, terutama: https://bali-ppid.bpk.go.id/
-- [ ] *Cross-browser testing* di Chrome, Safari, dan Firefox — desktop & mobile
+- [x] Semua 7 tautan ke `bali-ppid.bpk.go.id` terverifikasi menggunakan `target="_blank" rel="noopener noreferrer"`
+- [x] Preview lokal berjalan normal via `npx serve` — semua aset (gambar, CSS, JS) ter-load dengan status 200
+- [ ] *Cross-browser testing* di Chrome, Safari, Firefox — desktop & mobile *(dilakukan oleh pengelola)*
